@@ -10,6 +10,17 @@ file first; this document only adds rules specific to this submodule.
   Tests in this submodule must traverse the same surfaces a consumer
   touches; falsifiability rehearsals are recorded; capability honesty
   applies (a primitive that exposes a feature must work).
+- **Seventh Law (Anti-Bluff Enforcement, all 7 clauses)** — added by
+  the parent Lava CLAUDE.md (2026-04-30) in response to the operator
+  mandate that passing tests MUST guarantee user-reachable functionality.
+  Every test commit in this submodule MUST carry a Bluff-Audit stamp;
+  every primitive that claims a behavioural contract MUST have a
+  real-stack verification gate (e.g. `MockWebServer`-driven for HTTP
+  primitives, in-memory Postgres-driven for persistence primitives,
+  real-cluster-driven for clustering primitives where the cluster is
+  spun up via testcontainers); the bluff-hunt protocol applies; the
+  forbidden test patterns list is binding. See parent CLAUDE.md
+  "Seventh Law" section for the verbatim text.
 - **Local-Only CI/CD** — no `.github/workflows/*`, no `.gitlab-ci.yml`,
   no GitVerse pipelines, no GitFlic CI. The `scripts/ci.sh` in this
   repo is the only quality gate; it runs locally only.
