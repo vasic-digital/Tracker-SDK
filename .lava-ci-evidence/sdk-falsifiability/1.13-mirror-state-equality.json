@@ -1,0 +1,10 @@
+{
+  "task": "sdk-1.13",
+  "subject": "MirrorState equality contract",
+  "test": "MirrorStateFalsifiabilityTest.equality is structural — proves data class shape",
+  "mutation": "Changed `data class MirrorState` to `class MirrorState`",
+  "observed": "com.google.common.truth.ComparisonFailureWithFacts: expected: lava.sdk.api.MirrorState@560348e6 but was : lava.sdk.api.MirrorState@7d94beb9 (at MirrorStateFalsifiabilityTest.kt:14)",
+  "reverted": "Restored `data` keyword via git checkout -- api/src/main/kotlin/lava/sdk/api/MirrorState.kt",
+  "post_revert_status": "BUILD SUCCESSFUL — all :api tests pass",
+  "ledger_clause": "6.A"
+}

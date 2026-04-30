@@ -4,4 +4,6 @@ build/
 *.iml
 local.properties
 out/
-.lava-ci-evidence/
+.lava-ci-evidence/*
+!.lava-ci-evidence/sdk-falsifiability/
+!.lava-ci-evidence/sdk-falsifiability/**
