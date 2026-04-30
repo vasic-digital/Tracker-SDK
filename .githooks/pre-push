@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# .githooks/pre-push — non-bypassable local CI gate
+set -euo pipefail
+exec ./scripts/ci.sh
