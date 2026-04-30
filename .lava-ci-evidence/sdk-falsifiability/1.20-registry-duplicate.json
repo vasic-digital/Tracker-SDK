@@ -1,0 +1,9 @@
+{
+  "task": "sdk-1.20",
+  "subject": "DefaultPluginRegistry duplicate-id semantics",
+  "test": "DefaultPluginRegistryFalsifiabilityTest.re-registering same id replaces the factory (last-write-wins)",
+  "mutation": "Changed DefaultPluginRegistry.register() to silently ignore duplicate ids (if (!factories.containsKey(id)) factories[id] = factory)",
+  "observed": "expected: second\nbut was : first",
+  "reverted": "Restored last-write-wins via git checkout -- registry/src/main/kotlin/lava/sdk/registry/DefaultPluginRegistry.kt",
+  "ledger_clause": "6.A"
+}
