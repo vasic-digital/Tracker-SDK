@@ -1,0 +1,10 @@
+{
+  "task": "sdk-1.17",
+  "subject": "DefaultMirrorManager fallback chain skips UNHEALTHY",
+  "test": "DefaultMirrorManagerFalsifiabilityTest.fallback never invokes op when every mirror is UNHEALTHY (filter is load-bearing)",
+  "mutation": "Removed `.filter { it.health != HealthState.UNHEALTHY }` from executeWithFallback in mirror/src/main/kotlin/lava/sdk/mirror/DefaultMirrorManager.kt",
+  "observed": "java.lang.IllegalStateException: expected op to be invoked zero times (all mirrors UNHEALTHY); got touched=[https://a]",
+  "reverted": "Restored the filter line by editing DefaultMirrorManager.kt back to its committed shape; full :mirror suite re-ran green (DefaultHealthProbeTest=4, DefaultMirrorManagerTest=4, DefaultMirrorManagerFalsifiabilityTest=1).",
+  "ledger_clause": "6.A",
+  "notes": "Test design note: the production code blocks UNHEALTHY mirrors via two cooperating mechanisms — a (healthRank, priority) sort that demotes UNHEALTHY entries, and an explicit filter that removes them entirely. A two-mirror test where one is HEALTHY and one is UNHEALTHY is NOT falsifiable for the filter alone (the sort already places HEALTHY first). The rehearsal therefore uses an all-UNHEALTHY group, where only the filter can prevent op from being invoked; this isolates the filter as the load-bearing line and produces an observable failure when it is removed."
+}
