@@ -56,3 +56,17 @@ tests on `:api` and `:mirror`.
   hosts (`example.com`, `mirror1.example`, etc.).
 - Bypassing `./scripts/ci.sh` with `--no-verify`. The pre-push hook is
   not optional.
+
+## Seventh Law — Anti-Bluff Enforcement
+
+The full authoritative text lives in the parent project's `CLAUDE.md`
+and `AGENTS.md` (Lava monorepo root). All seven clauses apply
+recursively to this submodule:
+
+1. **Bluff-Audit Stamp** on every test commit (`*_test.go`, `*_test.kt`).
+2. **Real-Stack Verification Gate** for every user-visible primitive.
+3. **Pre-Tag Attestation** via `./scripts/pretag-verify.sh`.
+4. **Forbidden Test Patterns** — no SUT mocking, no verify-only primary assertions.
+5. **Recurring Bluff Hunt** — phase-end ritual, output to `.lava-ci-evidence/bluff-hunt/`.
+6. **Bluff Discovery Protocol** — incident recording in `.lava-ci-evidence/sixth-law-incidents/`.
+7. **Inheritance** — applies to every submodule artifact; stricter rules allowed, relaxation forbidden.

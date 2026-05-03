@@ -17,6 +17,10 @@ The following inherited rules are binding:
   Tests in this submodule must traverse the same surfaces a consumer
   touches; falsifiability rehearsals are recorded; capability honesty
   applies (a primitive that exposes a feature must work).
+- **Seventh Law (all 7 clauses)** — anti-bluff enforcement. Bluff-Audit
+  stamps on every test commit; real-stack verification gate; pre-tag
+  attestation; forbidden test patterns; recurring bluff hunts; bluff
+  discovery protocol; recursive inheritance to all submodules.
 - **Local-Only CI/CD** — no `.github/workflows/*`, no `.gitlab-ci.yml`,
   no GitVerse pipelines, no GitFlic CI. The `scripts/ci.sh` in this
   repo is the only quality gate; it runs locally only.
