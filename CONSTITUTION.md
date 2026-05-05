@@ -70,3 +70,11 @@ this script and is enabled via `git config core.hooksPath .githooks`.
 
 Bypassing the pre-push hook with `--no-verify` is forbidden in routine
 work and reserved for documented emergencies only.
+
+## Clause 6.L — Anti-Bluff Functional Reality Mandate (Operator's Standing Order)
+
+Inherited verbatim from parent Lava `/CLAUDE.md` §6.L. The operator has invoked this mandate **NINE TIMES** across two working days. The 9th invocation (2026-05-05 late evening): "Make sure that all existing tests and Challenges do work in anti-bluff manner — they MUST confirm that all tested codebase really works as expected!"
+
+Every test, every Challenge Test, every CI gate added to or maintained in this submodule MUST do exactly one job: confirm the feature it claims to cover actually works for an end user, end-to-end, on the gating matrix. CI green is necessary, NEVER sufficient. Tests must guarantee the product works — anything else is theatre.
+
+Inheritance is recursive. Sub-submodules MAY paste this clause verbatim; they MUST NOT abbreviate or relax it.

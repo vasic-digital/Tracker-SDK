@@ -70,3 +70,11 @@ recursively to this submodule:
 5. **Recurring Bluff Hunt** — phase-end ritual, output to `.lava-ci-evidence/bluff-hunt/`.
 6. **Bluff Discovery Protocol** — incident recording in `.lava-ci-evidence/sixth-law-incidents/`.
 7. **Inheritance** — applies to every submodule artifact; stricter rules allowed, relaxation forbidden.
+
+## Anti-Bluff Functional Reality Mandate (Operator's Standing Order — Constitutional clause 6.L)
+
+Inherited verbatim from parent Lava `/CLAUDE.md` §6.L. The operator has invoked this mandate **NINE TIMES** across two working days; the repetition itself is the forensic record. The 9th invocation (2026-05-05 late evening, immediately after Group C-pkg-vm closed §6.K-debt): "Make sure that all existing tests and Challenges do work in anti-bluff manner — they MUST confirm that all tested codebase really works as expected!"
+
+Every test, every Challenge Test, every CI gate added to or maintained in this submodule has exactly one job: confirm the feature it claims to cover actually works for an end user, end-to-end, on the gating matrix. CI green is necessary, NEVER sufficient. Tests must guarantee the product works — anything else is theatre. If you find yourself rationalizing a "small exception" — STOP. There are no small exceptions. The Internet Archive stuck-on-loading bug, the broken post-login navigation, the credential leak in C2, the bluffed C1-C8 — these are what "small exceptions" produce.
+
+Inheritance is recursive: this clause applies to every dependency, every test, every Challenge, every CI gate this submodule introduces. Sub-submodules MAY paste this clause verbatim; they MUST NOT abbreviate it.
