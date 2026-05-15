@@ -1,0 +1,24 @@
+# helix-deps.yaml — Tracker-SDK submodule Submodule-Dependency Manifest
+# Per HelixConstitution §11.4.31 (Submodule-Dependency-Manifest Mandate).
+#
+# Tracker-SDK is a Kotlin/Gradle leaf submodule providing per-tracker
+# plugin SDK + capability/feature contracts (the SP-3a ground truth).
+# It has ZERO own-org submodule dependencies — all plugins consumed
+# at the parent project level (Lava's core/tracker/* modules), not
+# vendored as submodules of Tracker-SDK itself.
+#
+# Schema reference: <constitution-submodule>/Constitution.md §11.4.31.
+# Last updated: 2026-05-15 (Phase 3-debt closure for Tracker-SDK).
+
+schema_version: 1
+deps: []
+
+transitive_handling:
+  recursive: true
+  conflict_resolution: operator-required
+
+# Tracker-SDK is a Kotlin/Gradle module — language_specific_subtree
+# is true because the entire submodule IS the Kotlin/Android subtree
+# (per §11.4.29 exemption: Android/Kotlin/Apple roots exempt from
+# snake_case enforcement on the inner subtree).
+language_specific_subtree: true
